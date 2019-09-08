@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should match latest snapshot 1`] = `
+<section
+  className="css-xjel9q-AppWrapper e1q1sy7m0"
+>
+  <div
+    className="css-smrfxc-Wrapper e1ehg2020"
+  >
+    <div
+      className="css-1yo68oz-Header e1ehg2024"
+    >
+      You think you've been bitten?
+    </div>
+    <div
+      className="css-74rito-Label e1ehg2028"
+    >
+      What happened?
+    </div>
+    <div
+      className="css-12lwwuy-FieldWrapper e1ehg2021"
+    >
+      <input
+        className="css-51f26o-Input e1ehg20211"
+        onChange={[Function]}
+        value=""
+      />
+      <span
+        className="css-1kefsjr-ExpandableButtonWrapper e1ehg2023"
+        disabled={false}
+      >
+        <span
+          className="css-dlo9cb-Button e1ehg20213"
+          disabled={true}
+          onClick={[Function]}
+          title="Next"
+        />
+      </span>
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppWrapper styled component should match latest snapshot 1`] = `
+<section
+  className="css-xjel9q-AppWrapper e1q1sy7m0"
+/>
+`;
