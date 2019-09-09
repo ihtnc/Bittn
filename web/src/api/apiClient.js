@@ -36,9 +36,14 @@ const getBookings = function (page) {
   });
 };
 
+const cancelBooking = function (bookingId) {
+  return API.init().delete(`bookings/${bookingId}`);
+};
+
 export default {
   getConditions,
   findHelp,
   bookPatient,
-  getBookings
+  getBookings,
+  cancelBooking
 };

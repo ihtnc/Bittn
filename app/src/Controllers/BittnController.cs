@@ -83,5 +83,21 @@ namespace Bittn.Api.Controllers
 
             return ApiResponseHelper.Ok<BookingDetails>($"{response?.Data?.Count() ?? 0} booking(s) found.", response);
         }
+
+        [HttpDelete("bookings/{bookingId}")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<ApiResponse>> CancelBooking(int bookingId, [FromServices] IBittnService bittnService)
+        {
+            var response = await bittnService.CancelBooking(new CancelBookingRequest
+            {
+                BookingId = bookingId
+            });
+
+            return response.Deleted
+                ? ApiResponseHelper.Ok("Booking deleted.", response)
+                : ApiResponseHelper.Fail("No booking deleted.", response);
+        }
     }
 }

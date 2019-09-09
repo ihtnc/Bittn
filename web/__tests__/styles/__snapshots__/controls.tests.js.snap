@@ -148,7 +148,7 @@ exports[`Controls styled components PanelWrapper should match latest snapshot 1`
 
 exports[`Controls styled components Row should match latest snapshot 1`] = `
 <tr
-  className="css-g7975v-Row e1ehg20223"
+  className="css-5pngix-Row e1ehg20223"
 />
 `;
 

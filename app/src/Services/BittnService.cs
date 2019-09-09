@@ -14,6 +14,7 @@ namespace Bittn.Api.Services
 
         Task<BookPatientResponse> BookPatient(BookPatientRequest request);
         Task<GetBookingsResponse> GetBookings(GetBookingsRequest request);
+        Task<CancelBookingResponse> CancelBooking(CancelBookingRequest request);
     }
 
     public class BittnService : IBittnService
@@ -68,7 +69,7 @@ namespace Bittn.Api.Services
 
         public async Task<BookPatientResponse> BookPatient(BookPatientRequest request)
         {
-            var added = await _bittnRepository.BookPatient(new BookingDetails
+            var added = await _bittnRepository.AddBooking(new BookingDetails
             {
                 ConditionId = request.ConditionId,
                 ConditionName = request.ConditionName,
@@ -98,6 +99,18 @@ namespace Bittn.Api.Services
                 Data = response.Data,
                 PrevPageIndex = response.PrevPageIndex,
                 NextPageIndex = response.NextPageIndex
+            };
+        }
+
+        public async Task<CancelBookingResponse> CancelBooking(CancelBookingRequest request)
+        {
+            var response = await _bittnRepository.DeleteBooking(new DeleteBookingRequest
+            {
+                Id = request.BookingId
+            });
+            return new CancelBookingResponse
+            {
+                Deleted = response.Deleted
             };
         }
     }

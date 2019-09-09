@@ -16,7 +16,7 @@ namespace Bittn.Api.Repositories.AzureRepository
             _provider = provider;
         }
 
-        public Task<BookingDetails> BookPatient(BookingDetails request)
+        public async Task<BookingDetails> AddBooking(BookingDetails request)
         {
             BookingDetails added;
 
@@ -31,10 +31,10 @@ namespace Bittn.Api.Repositories.AzureRepository
                 added = bookings.FindById(id);
             }
 
-            return Task.FromResult(added);
+            return await Task.FromResult(added);
         }
 
-        public Task<RetrieveBookingsResponse> RetrieveBookings(RetrieveBookingsRequest request)
+        public async Task<RetrieveBookingsResponse> RetrieveBookings(RetrieveBookingsRequest request)
         {
             RetrieveBookingsResponse response;
             IEnumerable<BookingDetails> items;
@@ -64,7 +64,24 @@ namespace Bittn.Api.Repositories.AzureRepository
                 NextPageIndex = nextIndex
             };
 
-            return Task.FromResult(response);
+            return await Task.FromResult(response);
+        }
+
+        public async Task<DeleteBookingResponse> DeleteBooking(DeleteBookingRequest request)
+        {
+            bool deleted;
+
+            using(var db = _provider.GetDatabase())
+            {
+                var bookings = db.GetCollection<BookingDetails>("bookings");
+
+                deleted = bookings.Delete(request.Id);
+            }
+
+            return await Task.FromResult(new DeleteBookingResponse
+            {
+                Deleted = deleted
+            });
         }
     }
 }

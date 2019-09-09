@@ -167,7 +167,7 @@ class AppComponent extends Component {
 
         {this.showBooked() && (
           <Bookings
-            bookingId={1 || this.state.selectedPatient.id}
+            newId={this.state.selectedPatient.id}
             onAction={this.onBookingAction}/>
         )}
       </AppWrapper>

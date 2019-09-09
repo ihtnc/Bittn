@@ -20,16 +20,19 @@ import formatter from '@src/formatter';
 import SeverityButton from './severityButtonComponent';
 import MoreButton from './moreButtonComponent';
 import NewButton from './newButtonComponent';
+import DeleteButton from './deleteButtonComponent'
 
 class BookingsComponent extends Component {
   state = {};
 
   static propTypes = {
-    onAction: PropTypes.func
+    onAction: PropTypes.func,
+    newId: PropTypes.number
   }
 
   static defaultProps = {
-    onAction: (data, action) => {}
+    onAction: (data, action) => {},
+    newId: null
   }
 
   constructor(props) {
@@ -46,6 +49,7 @@ class BookingsComponent extends Component {
 
     this.onNewClick = this.onNewClick.bind(this);
     this.onMoreClick = this.onMoreClick.bind(this);
+    this.onDeleteClick = this.onDeleteClick.bind(this);
   }
 
   onNewClick = () => {
@@ -55,6 +59,20 @@ class BookingsComponent extends Component {
   onMoreClick = () => {
     this.setState({currentPage: this.state.nextPage});
     this.getBookings(this.state.nextPage, true);
+  }
+
+  onDeleteClick = () => {
+    this.showBusy();
+
+    ApiClient
+      .cancelBooking(this.props.newId)
+      .then(res => {
+        this.props.onAction(null, 'next');
+      })
+      .catch(error => {
+        this.setState({ bookings: null });
+        this.showError(error.message);
+      });
   }
 
   showBusy() {
@@ -118,21 +136,34 @@ class BookingsComponent extends Component {
       <Wrapper>
         <Header>You've booked help!</Header>
 
-        <Label>Here are the others who booked help as well...</Label>
+        <Label>Here are all the bookings so far...</Label>
 
         {!this.state.error && this.state.bookings && (
           <Table>
             <tbody>
-            {this.state.bookings.map(b =>
-              <Row key={b.id}>
-                <Column title={formatter.toIsoDate(b.createDate)}>{formatter.toIsoDate(b.createDate)}</Column>
-                <Column title={b.patientName}>{b.patientName}</Column>
-                <Column title={b.conditionName}>{b.conditionName}</Column>
-                <Column>
-                  <SeverityButton severity={b.severityLevel} expandable={false} iconSize={true} />
-                </Column>
-                <Column title={b.helpName}>{b.helpName}</Column>
-              </Row>)}
+            {this.state.bookings.map(b => {
+              const self = b.id == this.props.newId;
+              return (
+                <Row key={b.id}>
+                  <Column title={formatter.toIsoDate(b.createDate)}>{formatter.toIsoDate(b.createDate)}</Column>
+                  <Column title={b.patientName}>{self ? 'You' : b.patientName}</Column>
+                  <Column title={b.conditionName}>{b.conditionName}</Column>
+                  <Column>
+                    <SeverityButton severity={b.severityLevel} expandable={false} iconSize={true} />
+                  </Column>
+                  <Column title={b.helpName}>{b.helpName}</Column>
+                  <Column>
+                    {self && (
+                      <DeleteButton
+                        title={'Cancel'}
+                        onClick={this.onDeleteClick}
+                        disabled={this.state.busy}
+                      />
+                    )}
+                  </Column>
+                </Row>
+              );
+            })}
             </tbody>
           </Table>
         )}

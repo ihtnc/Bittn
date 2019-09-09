@@ -122,11 +122,11 @@ namespace Bittn.Api.Tests.Services
         }
 
         [Fact]
-        public async void BookPatient_Should_Call_IBittnRepository_BookPatient()
+        public async void BookPatient_Should_Call_IBittnRepository_AddBooking()
         {
             BookingDetails arg = null;
             _bittnRepository
-                .BookPatient(Arg.Do<BookingDetails>(a => arg = a))
+                .AddBooking(Arg.Do<BookingDetails>(a => arg = a))
                 .Returns(new BookingDetails());
 
             var request = new BookPatientRequest
@@ -141,7 +141,7 @@ namespace Bittn.Api.Tests.Services
 
             await _service.BookPatient(request);
 
-            await _bittnRepository.Received(1).BookPatient(Arg.Any<BookingDetails>());
+            await _bittnRepository.Received(1).AddBooking(Arg.Any<BookingDetails>());
             arg.ConditionId.Should().Be(request.ConditionId);
             arg.ConditionName.Should().Be(request.ConditionName);
             arg.HelpId.Should().Be(request.HelpId);
@@ -155,7 +155,7 @@ namespace Bittn.Api.Tests.Services
         public async void BookPatient_Should_Return_Correctly()
         {
             var response = new BookingDetails { Id = 123 };
-            _bittnRepository.BookPatient(Arg.Any<BookingDetails>()).Returns(response);
+            _bittnRepository.AddBooking(Arg.Any<BookingDetails>()).Returns(response);
 
             var actual = await _service.BookPatient(new BookPatientRequest());
 

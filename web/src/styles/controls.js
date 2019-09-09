@@ -293,8 +293,13 @@ const Table = styled.table`
 `;
 
 const Row = styled.tr`
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     background-color: #F9E3AE;
+  }
+
+  &:first-of-type {
+    font-size: larger;
+    background-color: #72CAAF;
   }
 `;
 

@@ -333,5 +333,72 @@ namespace Bittn.Api.Tests.Controllers
             actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Navigation.PrevPageIndex.Should().Be(response.PrevPageIndex);
             actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Navigation.NextPageIndex.Should().Be(response.NextPageIndex);
         }
+
+        [Fact]
+        public void CancelBooking_Should_Include_HttpDeleteAttribute()
+        {
+            var methodName = nameof(_controller.CancelBooking);
+            var t = _controller.GetType();
+            t.GetMethod(methodName).Should().BeDecoratedWith<HttpDeleteAttribute>(attr => attr.Template == "bookings/{bookingId}");
+        }
+
+        [Fact]
+        public void CancelBooking_Should_Include_ProducesAttribute()
+        {
+            var methodName = nameof(_controller.CancelBooking);
+            var t = _controller.GetType();
+            t.GetMethod(methodName)
+                .Should().BeDecoratedWith<ProducesAttribute>()
+                .Which.ContentTypes.Should().Contain("application/json");
+        }
+
+        [Theory]
+        [InlineData(StatusCodes.Status200OK, null)]
+        [InlineData(StatusCodes.Status500InternalServerError, typeof(ApiResponse))]
+        public void CancelBooking_Should_Include_ProducesResponseTypeAttribute(int statusCode, Type responseType)
+        {
+            var methodName = nameof(_controller.CancelBooking);
+            var t = _controller.GetType();
+            t.GetMethod(methodName).Should().BeDecoratedWith<ProducesResponseTypeAttribute>(attr => attr.StatusCode == statusCode && (responseType == null || attr.Type == responseType));
+        }
+
+        [Fact]
+        public async void CancelBooking_Should_Call_IBittnService_CancelBooking()
+        {
+            var service = Substitute.For<IBittnService>();
+            CancelBookingRequest arg = null;
+            service.CancelBooking(Arg.Do<CancelBookingRequest>(a => arg = a)).Returns(new CancelBookingResponse());
+
+            var id = 1;
+            await _controller.CancelBooking(id, service);
+
+            await service.Received(1).CancelBooking(Arg.Any<CancelBookingRequest>());
+            arg.BookingId.Should().Be(id);
+        }
+
+        [Theory]
+        [InlineData(true, true, "Booking deleted.")]
+        [InlineData(false, false, "No booking deleted.")]
+        public async void CancelBooking_Should_Return_Correctly(bool deleted, bool expectedSuccess, string expectedMessage)
+        {
+            var response = new CancelBookingResponse
+            {
+                Deleted = deleted
+            };
+            var service = Substitute.For<IBittnService>();
+            service.CancelBooking(Arg.Any<CancelBookingRequest>()).Returns(response);
+
+            var actual = await _controller.CancelBooking(1, service);
+
+            actual.Should().BeOfType<ActionResult<ApiResponse>>();
+
+            actual.Result.Should().BeOfType<ObjectResult>();
+            actual.Result.As<ObjectResult>().StatusCode.Should().Be(StatusCodes.Status200OK);
+
+            actual.Result.As<ObjectResult>().Value.Should().BeOfType<ApiResponse>();
+            actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Success.Should().Be(expectedSuccess);
+            actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Message.Should().Be(expectedMessage);
+            actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Data.Should().Be(response);
+        }
     }
 }
