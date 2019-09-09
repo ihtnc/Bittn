@@ -1,3 +1,5 @@
+<img alt="App Preview" src="https://i.imgur.com/FYpmpUB.gif" width="500px" />
+
 # Bittn Application
 
 Repository for the APP (ReactJS) and API (.NET Core) projects of the Bittn application.

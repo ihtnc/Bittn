@@ -50,7 +50,7 @@ namespace Bittn.Api.Repositories.AzureRepository
                 illnesses = await SearchAzureIllnesses(next);
                 next = illnesses._links?.Next?.Href;
                 var nextItems = illnesses._embedded.Illnesses.ToIllnessDetailsList();
-                var nextFiltered = nextItems.Where(i => i.Name.Contains(request.IllnessName));
+                var nextFiltered = nextItems.Where(i => i.Name.Contains(request.IllnessName, StringComparison.OrdinalIgnoreCase));
                 list.AddRange(nextFiltered);
             }
 
