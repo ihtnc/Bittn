@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "LandmarRemark.Api": {
+    "Bittn.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

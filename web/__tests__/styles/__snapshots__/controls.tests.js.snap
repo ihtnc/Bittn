@@ -21,7 +21,7 @@ exports[`Controls styled components Column should match latest snapshot 1`] = `
 
 exports[`Controls styled components ErrorIcon should match latest snapshot 1`] = `
 <span
-  className="css-1c74jem-ErrorIcon e1ehg20215"
+  className="css-1bs8t5j-ErrorIcon e1ehg20215"
 />
 `;
 
@@ -160,7 +160,7 @@ exports[`Controls styled components SelectedIcon should render correctly when no
 
 exports[`Controls styled components SelectedIcon should render correctly when selected 1`] = `
 <span
-  className="css-sp03bw-SelectedIcon e1ehg20214"
+  className="css-r47jh3-SelectedIcon e1ehg20214"
   selected={true}
 />
 `;
