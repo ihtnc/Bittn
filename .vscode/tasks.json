@@ -16,6 +16,22 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "copy-mocks",
+            "type": "shell",
+            "command": "xcopy",
+            "args": [
+                "..\\mocks",
+                "..\\..\\output\\mocks",
+                "/Y",
+                "/I",
+                "/E"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/app/src"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "build-web",
             "type": "shell",
             "command": "npm",
@@ -39,7 +55,7 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile",
-            "dependsOn": ["build-web", "copy-app-settings"],
+            "dependsOn": ["build-web", "copy-app-settings", "copy-mocks"],
         },
         {
             "label": "publish",
