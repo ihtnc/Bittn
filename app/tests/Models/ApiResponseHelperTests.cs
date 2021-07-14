@@ -179,7 +179,23 @@ namespace Bittn.Api.Tests.Models
         }
 
         [Fact]
-        public void HandleObjectResponse_Should_Return_Correctly()
+        public void ObjectResponse_Should_Return_Null_Content_Correctly()
+        {
+            var actual = ApiResponseHelper.ObjectResponse(StatusCodes.Status100Continue, true, "message");
+
+            actual.Should().BeOfType<ActionResult<ApiResponse>>();
+
+            actual.Result.Should().BeOfType<ObjectResult>();
+            actual.Result.As<ObjectResult>().StatusCode.Should().Be(StatusCodes.Status100Continue);
+
+            actual.Result.As<ObjectResult>().Value.Should().BeOfType<ApiResponse>();
+            actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Success.Should().Be(true);
+            actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Message.Should().Be("message");
+            actual.Result.As<ObjectResult>().Value.As<ApiResponse>().Data.Should().BeNull();
+        }
+
+        [Fact]
+        public void ObjectResponse_Should_Return_Correctly()
         {
             var actual = ApiResponseHelper.ObjectResponse(StatusCodes.Status100Continue, true, message: "message", "content");
 
@@ -195,7 +211,7 @@ namespace Bittn.Api.Tests.Models
         }
 
         [Fact]
-        public void HandleObjectResponse_Should_Return_PagedResponse_Correctly()
+        public void ObjectResponse_Should_Return_PagedResponse_Correctly()
         {
             var content = new PagedResponse<string>
             {

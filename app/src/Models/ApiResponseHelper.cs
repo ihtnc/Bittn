@@ -51,7 +51,7 @@ namespace Bittn.Api.Models
             return ObjectResponse(StatusCodes.Status500InternalServerError, false, message: message, content: data);
         }
 
-        public static ActionResult<ApiResponse> ObjectResponse<T>(int statusCode, bool success, string message, T content = default)
+        public static ActionResult<ApiResponse> ObjectResponse(int statusCode, bool success, string message)
         {
             var response = new ApiResponse
             {
@@ -59,7 +59,18 @@ namespace Bittn.Api.Models
                 Message = message
             };
 
-            if (content != default)
+            return new ObjectResult(response) { StatusCode = statusCode };
+        }
+
+        public static ActionResult<ApiResponse> ObjectResponse<T>(int statusCode, bool success, string message, T content)
+        {
+            var response = new ApiResponse
+            {
+                Success = success,
+                Message = message
+            };
+
+            if (content != null)
             {
                 response.Data = content;
             }
@@ -67,7 +78,7 @@ namespace Bittn.Api.Models
             return new ObjectResult(response) { StatusCode = statusCode };
         }
 
-        public static ActionResult<ApiResponse> ObjectResponse<T>(int statusCode, bool success, string message, PagedResponse<T> content = default)
+        public static ActionResult<ApiResponse> ObjectResponse<T>(int statusCode, bool success, string message, PagedResponse<T> content)
         {
             var response = new ApiResponse
             {
@@ -75,7 +86,7 @@ namespace Bittn.Api.Models
                 Message = message
             };
 
-            if (content != default)
+            if (content?.Data != null)
             {
                 response.Data = content.Data;
                 response.Navigation = new ApiNavigation

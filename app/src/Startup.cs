@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Bittn.Api.Config;
 using Bittn.Api.Filters;
 using Bittn.Api.Middlewares;
@@ -27,18 +28,18 @@ namespace Bittn.Api
                 .Configure<BittnConfig>(option => { option.Database = Configuration["ENV_BITTN_DATABASE"]; })
                 .Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });
 
+            services.AddControllers();
             services.AddDependencies();
 
             services
                 .AddCors()
-                .AddMvc(config => { config.Filters.Add<ModelValidationFilter>(); })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+                .AddMvc(config => { config.Filters.Add<ModelValidationFilter>(); });
 
             services.AddApiDocumentation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
@@ -51,15 +52,16 @@ namespace Bittn.Api
                 app.UseHsts();
             }
 
+            app.UseRouting();
             app.UseCors(builder =>
-                builder.AllowAnyOrigin()
-                       .AllowAnyHeader()
-                       .AllowAnyMethod()
-                       .AllowCredentials());
+                    builder.AllowAnyHeader()
+                           .AllowAnyMethod()
+                           .AllowCredentials()
+                           .SetIsOriginAllowed(hostName => true));
+
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
 
             app.UseApiDocumentation();
-
-            app.UseMvc();
         }
     }
 }

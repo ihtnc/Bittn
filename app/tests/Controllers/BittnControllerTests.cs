@@ -167,7 +167,10 @@ namespace Bittn.Api.Tests.Controllers
         [Fact]
         public async void FindHelp_Should_Return_Correctly()
         {
-            var response = new FindHelpResponse();
+            var response = new FindHelpResponse
+            {
+                Data = new HelpDetails[0]
+            };
             var service = Substitute.For<IBittnService>();
             service.FindHelp(Arg.Any<FindHelpRequest>()).Returns(response);
 

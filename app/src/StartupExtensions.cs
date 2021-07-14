@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 using Bittn.Api.Http;
 using Bittn.Api.Repositories;
 using Bittn.Api.Repositories.AzureRepository;
@@ -30,13 +30,12 @@ namespace Bittn.Api
         {
             return services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("V1", new Info
+                c.SwaggerDoc("V1", new OpenApiInfo
                 {
                     Title = "Bittn API",
                     Version = "V1",
                     Description = "Backend API for the Bittn app",
-                    TermsOfService = "None",
-                    Contact = new Contact
+                    Contact = new OpenApiContact
                     {
                         Name = "Art Amurao"
                     }
