@@ -1,0 +1,90 @@
+{
+  "_embedded": {
+    "illnesses": [
+      {
+        "illness": {
+          "name": "Cow Acne",
+          "id": 11
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/11"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Devil's Finger",
+          "id": 12
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/12"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Delirious Insanity",
+          "id": 13
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/13"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Contagious Measles",
+          "id": 14
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/14"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Lady Euphoria",
+          "id": 15
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/15"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:5000/api/mocks/illnesses?page=1"
+    },
+    "prev": {
+      "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+    }
+  },
+  "page": {
+    "size": 5,
+    "totalElements": 15,
+    "totalPages": 1,
+    "number": 1
+  }
+}

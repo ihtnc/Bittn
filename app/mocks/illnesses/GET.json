@@ -1,0 +1,160 @@
+{
+  "_embedded": {
+    "illnesses": [
+      {
+        "illness": {
+          "name": "Mortal Cold",
+          "id": 1
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/1"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Happy Euphoria",
+          "id": 2
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/2"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Withering Parasite",
+          "id": 3
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/3"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Death's Delusions",
+          "id": 4
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/4"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Intense Intolerance",
+          "id": 5
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/5"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Whispering Hepatitis",
+          "id": 6
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/6"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Spirit Parasite",
+          "id": 7
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/7"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Crippling Paranoia",
+          "id": 8
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/8"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Sheep Sneeze",
+          "id": 9
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/9"
+          }
+        }
+      },
+      {
+        "illness": {
+          "name": "Impossible Ebola",
+          "id": 10
+        },
+        "_links": {
+          "illnesses": {
+            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+          },
+          "self": {
+            "href": "http://localhost:5000/api/mocks/illnesses/10"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+    },
+    "next": {
+      "href": "http://localhost:5000/api/mocks/illnesses?page=1"
+    }
+  },
+  "page": {
+    "size": 10,
+    "totalElements": 15,
+    "totalPages": 1,
+    "number": 0
+  }
+}

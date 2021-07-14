@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Qckmox">
+      <HintPath>..\Qckmox\Qckmox.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

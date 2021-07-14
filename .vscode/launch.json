@@ -8,7 +8,7 @@
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "prepare-app",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/app/src/bin/Debug/netcoreapp5.0/Bittn.Api.dll",
             "args": [],
