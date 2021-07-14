@@ -1,5 +1,5 @@
 export default {
-  GOOGLE_MAP_API_KEY: 'GOOGLE_MAP_API_KEY',
+  GOOGLE_MAP_API_KEY: 'AIzaSyDX98B2wbQT_xfOh2NzPNXKCCy29HFPOxQ',
   API_URL: 'https://localhost:5001/api/',
   VALUE_THRESHOLDS: {
     QUEUE: {

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QckMox;
 using Bittn.Api.Config;
 using Bittn.Api.Filters;
 using Bittn.Api.Middlewares;
@@ -35,6 +36,8 @@ namespace Bittn.Api
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddApiDocumentation();
+
+            services.AddQckMox(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +47,7 @@ namespace Bittn.Api
             app.UseStaticFiles();
 
             app.UseMiddleware<ExceptionHandlingMiddleware>();
+            app.UseQckMox();
 
             if (!env.IsDevelopment())
             {

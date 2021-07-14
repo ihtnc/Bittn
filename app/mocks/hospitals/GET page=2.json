@@ -1,0 +1,125 @@
+{
+  "_embedded": {
+    "hospitals": [
+      {
+        "id": 21,
+        "name": "Wollongong Hospital",
+        "waitingList": [
+          {
+            "patientCount": 11,
+            "levelOfPain": 0,
+            "averageProcessTime": 73
+          },
+          {
+            "patientCount": 2,
+            "levelOfPain": 1,
+            "averageProcessTime": 24
+          },
+          {
+            "patientCount": 4,
+            "levelOfPain": 2,
+            "averageProcessTime": 14
+          },
+          {
+            "patientCount": 11,
+            "levelOfPain": 3,
+            "averageProcessTime": 58
+          },
+          {
+            "patientCount": 21,
+            "levelOfPain": 4,
+            "averageProcessTime": 82
+          }
+        ],
+        "location": {
+          "lat": -34.42442,
+          "lng": 150.884
+        }
+      },
+      {
+        "id": 22,
+        "name": "Shellharbour Hospital",
+        "waitingList": [
+          {
+            "patientCount": 7,
+            "levelOfPain": 0,
+            "averageProcessTime": 8
+          },
+          {
+            "patientCount": 5,
+            "levelOfPain": 1,
+            "averageProcessTime": 77
+          },
+          {
+            "patientCount": 5,
+            "levelOfPain": 2,
+            "averageProcessTime": 28
+          },
+          {
+            "patientCount": 7,
+            "levelOfPain": 3,
+            "averageProcessTime": 36
+          },
+          {
+            "patientCount": 5,
+            "levelOfPain": 4,
+            "averageProcessTime": 55
+          }
+        ],
+        "location": {
+          "lat": -34.559028,
+          "lng": 150.841048
+        }
+      },
+      {
+        "id": 23,
+        "name": "Sydney Hospital & Sydney Eye Hospital",
+        "waitingList": [
+          {
+            "patientCount": 5,
+            "levelOfPain": 0,
+            "averageProcessTime": 92
+          },
+          {
+            "patientCount": 5,
+            "levelOfPain": 1,
+            "averageProcessTime": 47
+          },
+          {
+            "patientCount": 1,
+            "levelOfPain": 2,
+            "averageProcessTime": 48
+          },
+          {
+            "patientCount": 5,
+            "levelOfPain": 4,
+            "averageProcessTime": 0
+          },
+          {
+            "patientCount": 5,
+            "levelOfPain": 3,
+            "averageProcessTime": 99
+          }
+        ],
+        "location": {
+          "lat": -33.868919,
+          "lng": 151.212122
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:5000/api/mocks/hospitals?page=0"
+    },
+    "prev": {
+      "href": "http://localhost:5000/api/mocks/hospitals?page=1"
+    }
+  },
+  "page": {
+    "size": 3,
+    "totalElements": 23,
+    "totalPages": 2,
+    "number": 2
+  }
+}
