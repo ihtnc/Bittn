@@ -1,42 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component should match latest snapshot 1`] = `
-<section
-  className="css-xjel9q-AppWrapper e1q1sy7m0"
->
-  <div
-    className="css-smrfxc-Wrapper e1ehg2020"
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-1gjn8ni-AppWrapper{width:100%;height:100%;}",
+      }
+    }
+    data-emotion-css="1gjn8ni-AppWrapper"
+  />,
+  <section
+    className="css-1gjn8ni-AppWrapper e1q1sy7m0"
   >
     <div
-      className="css-1yo68oz-Header e1ehg2024"
+      className="css-smrfxc-Wrapper e1ehg2020"
     >
-      You think you've been bitten?
-    </div>
-    <div
-      className="css-74rito-Label e1ehg2028"
-    >
-      What happened?
-    </div>
-    <div
-      className="css-12lwwuy-FieldWrapper e1ehg2021"
-    >
-      <input
-        className="css-51f26o-Input e1ehg20211"
-        onChange={[Function]}
-        value=""
-      />
-      <span
-        className="css-1kefsjr-ExpandableButtonWrapper e1ehg2023"
-        disabled={false}
+      <div
+        className="css-1yo68oz-Header e1ehg2024"
       >
-        <span
-          className="css-dlo9cb-Button e1ehg20213"
-          disabled={true}
-          onClick={[Function]}
-          title="Next"
+        You think you've been bitten?
+      </div>
+      <div
+        className="css-74rito-Label e1ehg2028"
+      >
+        What happened?
+      </div>
+      <div
+        className="css-12lwwuy-FieldWrapper e1ehg2021"
+      >
+        <input
+          className="css-51f26o-Input e1ehg20211"
+          onChange={[Function]}
+          value=""
         />
-      </span>
+        <span
+          className="css-1kefsjr-ExpandableButtonWrapper e1ehg2023"
+          disabled={false}
+        >
+          <span
+            className="css-dlo9cb-Button e1ehg20213"
+            disabled={true}
+            onClick={[Function]}
+            title="Next"
+          />
+        </span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>,
+]
 `;

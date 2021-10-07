@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppWrapper styled component should match latest snapshot 1`] = `
-<section
-  className="css-xjel9q-AppWrapper e1q1sy7m0"
-/>
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-1gjn8ni-AppWrapper{width:100%;height:100%;}",
+      }
+    }
+    data-emotion-css="1gjn8ni-AppWrapper"
+  />,
+  <section
+    className="css-1gjn8ni-AppWrapper e1q1sy7m0"
+  />,
+]
 `;
