@@ -8,10 +8,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/1"
+            "href": "http://localhost:8180/api/mocks/illnesses/1"
           }
         }
       },
@@ -22,10 +22,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/2"
+            "href": "http://localhost:8180/api/mocks/illnesses/2"
           }
         }
       },
@@ -36,10 +36,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/3"
+            "href": "http://localhost:8180/api/mocks/illnesses/3"
           }
         }
       },
@@ -50,10 +50,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/4"
+            "href": "http://localhost:8180/api/mocks/illnesses/4"
           }
         }
       },
@@ -64,10 +64,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/5"
+            "href": "http://localhost:8180/api/mocks/illnesses/5"
           }
         }
       },
@@ -78,10 +78,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/6"
+            "href": "http://localhost:8180/api/mocks/illnesses/6"
           }
         }
       },
@@ -92,10 +92,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/7"
+            "href": "http://localhost:8180/api/mocks/illnesses/7"
           }
         }
       },
@@ -106,10 +106,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/8"
+            "href": "http://localhost:8180/api/mocks/illnesses/8"
           }
         }
       },
@@ -120,10 +120,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/9"
+            "href": "http://localhost:8180/api/mocks/illnesses/9"
           }
         }
       },
@@ -134,10 +134,10 @@
         },
         "_links": {
           "illnesses": {
-            "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+            "href": "http://localhost:8180/api/mocks/illnesses?page=0"
           },
           "self": {
-            "href": "http://localhost:5000/api/mocks/illnesses/10"
+            "href": "http://localhost:8180/api/mocks/illnesses/10"
           }
         }
       }
@@ -145,10 +145,10 @@
   },
   "_links": {
     "self": {
-      "href": "http://localhost:5000/api/mocks/illnesses?page=0"
+      "href": "http://localhost:8180/api/mocks/illnesses?page=0"
     },
     "next": {
-      "href": "http://localhost:5000/api/mocks/illnesses?page=1"
+      "href": "http://localhost:8180/api/mocks/illnesses?page=1"
     }
   },
   "page": {
