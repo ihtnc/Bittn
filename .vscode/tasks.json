@@ -48,7 +48,7 @@
             "type": "shell",
             "command": "xcopy",
             "args": [
-                "bin\\Debug\\netcoreapp5.0\\*",
+                "bin\\Debug\\netcoreapp8.0\\*",
                 "..\\..\\output",
                 "/Y",
                 "/I",
