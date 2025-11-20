@@ -70,16 +70,18 @@ exports.prodConfig = {
   }
 };
 
-exports.devServer = ({} = {}) => ({
+exports.devServer = ({host = 'localhost', port = 8080} = {}) => ({
   devServer: {
-    host: 'localhost',
-    port: 8080,
+    host,
+    port,
     open: true,
+    hot: true,
     client: {
-      overlay: true
-    },
-    devMiddleware: {
-      stats: "errors-only"
+      overlay: {
+        errors: true,
+        warnings: false
+      }
     }
   },
+  stats: "errors-only"
 });
