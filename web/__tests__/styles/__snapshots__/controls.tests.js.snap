@@ -1,10 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Controls styled components Button should render correctly when disabled 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1bz3hzy-Button{width:4vh;height:4vh;min-width:4vh;min-height:4vh;margin:0 0.5vw;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background-repeat:no-repeat;background-size:contain;width:8vh;height:8vh;min-width:8vh;min-height:8vh;margin:1vh 1vw;background-image:url(background-image);}.css-1bz3hzy-Button:hover{cursor:pointer;width:10vh;height:10vh;min-width:10vh;min-height:10vh;}.css-1bz3hzy-Button:hover{cursor:not-allowed;}",
       }
     }
@@ -18,10 +18,10 @@ Array [
 `;
 
 exports[`Controls styled components Button should render correctly when not disabled 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-e5ocwc-Button{width:4vh;height:4vh;min-width:4vh;min-height:4vh;margin:0 0.5vw;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background-repeat:no-repeat;background-size:contain;width:8vh;height:8vh;min-width:8vh;min-height:8vh;margin:1vh 1vw;background-image:url(background-image);}.css-e5ocwc-Button:hover{cursor:pointer;width:10vh;height:10vh;min-width:10vh;min-height:10vh;}",
       }
     }
@@ -34,10 +34,10 @@ Array [
 `;
 
 exports[`Controls styled components Column should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1s9x4p7-Column{border-width:1px 0;border-style:solid;padding:1vh 1vw;min-width:75px;max-width:200px;max-height:30px;}.css-1s9x4p7-Column:first-of-type{border-left:1px;border-style:solid;}.css-1s9x4p7-Column:last-of-type{border-right:1px;border-style:solid;}",
       }
     }
@@ -50,10 +50,10 @@ Array [
 `;
 
 exports[`Controls styled components ErrorIcon should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1bs8t5j-ErrorIcon{width:4vh;height:4vh;min-width:4vh;min-height:4vh;margin:0 0.5vw;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background-repeat:no-repeat;background-size:contain;width:8vh;height:8vh;min-width:8vh;min-height:8vh;background-image:url(data:image/png;base64,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);}",
       }
     }
@@ -66,10 +66,10 @@ Array [
 `;
 
 exports[`Controls styled components ErrorLabel should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-2ri7jk-ErrorLabel{font-size:4vh;padding:1vh 1vw;font-size:smaller;color:#ED7899;}",
       }
     }
@@ -82,10 +82,10 @@ Array [
 `;
 
 exports[`Controls styled components ExpandableButtonWrapper should render correctly when disabled 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-ie68j7-ExpandableButtonWrapper{width:10vh;height:10vh;min-width:10vh;min-height:10vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.css-ie68j7-ExpandableButtonWrapper > .e1ehg20213:hover{width:8vh;height:8vh;min-width:8vh;min-height:8vh;}.css-ie68j7-ExpandableButtonWrapper > .e1ehg20216:hover{width:4vh;height:4vh;min-width:4vh;min-height:4vh;}",
       }
     }
@@ -99,10 +99,10 @@ Array [
 `;
 
 exports[`Controls styled components ExpandableButtonWrapper should render correctly when not disabled 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1kefsjr-ExpandableButtonWrapper{width:10vh;height:10vh;min-width:10vh;min-height:10vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}",
       }
     }
@@ -115,10 +115,10 @@ Array [
 `;
 
 exports[`Controls styled components FieldWrapper should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-12lwwuy-FieldWrapper{font-size:4vh;padding:1vh 1vw;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}",
       }
     }
@@ -131,10 +131,10 @@ Array [
 `;
 
 exports[`Controls styled components Header should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1yo68oz-Header{font-size:4vh;padding:1vh 1vw;font-weight:bold;font-size:larger;}",
       }
     }
@@ -147,10 +147,10 @@ Array [
 `;
 
 exports[`Controls styled components IconButton should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-q92v05-IconButton{width:4vh;height:4vh;min-width:4vh;min-height:4vh;margin:0 0.5vw;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background-repeat:no-repeat;background-size:contain;margin:1vh 1vw;background-image:url(background-image);}.css-q92v05-IconButton:hover{cursor:pointer;width:6vh;height:6vh;}",
       }
     }
@@ -163,10 +163,10 @@ Array [
 `;
 
 exports[`Controls styled components Input should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-51f26o-Input{font-size:4vh;padding:1vh 1vw;border:1px solid;}",
       }
     }
@@ -179,10 +179,10 @@ Array [
 `;
 
 exports[`Controls styled components Label should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-74rito-Label{font-size:4vh;padding:1vh 1vw;font-size:smaller;margin-top:3vh;}",
       }
     }
@@ -195,10 +195,10 @@ Array [
 `;
 
 exports[`Controls styled components LevelLabel should render correctly for above level 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-tvjils-LevelLabel{padding-right:1vw;color:#ED7899;}",
       }
     }
@@ -211,10 +211,10 @@ Array [
 `;
 
 exports[`Controls styled components LevelLabel should render correctly for below level 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-q198i1-LevelLabel{padding-right:1vw;color:#72CAAF;}",
       }
     }
@@ -227,10 +227,10 @@ Array [
 `;
 
 exports[`Controls styled components LevelLabel should render correctly for default level 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-q198i1-LevelLabel{padding-right:1vw;color:#72CAAF;}",
       }
     }
@@ -243,10 +243,10 @@ Array [
 `;
 
 exports[`Controls styled components LevelLabel should render correctly for same level 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-ofqk23-LevelLabel{padding-right:1vw;color:#F6D397;}",
       }
     }
@@ -259,10 +259,10 @@ Array [
 `;
 
 exports[`Controls styled components Link should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1letjox-Link{font-weight:bold;color:#72CAAF;-webkit-text-decoration:underline;text-decoration:underline;}.css-1letjox-Link:hover{cursor:pointer;color:#8D6C9F;}",
       }
     }
@@ -275,10 +275,10 @@ Array [
 `;
 
 exports[`Controls styled components List should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-b48mpp-List{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:0px;padding:0px;}",
       }
     }
@@ -291,10 +291,10 @@ Array [
 `;
 
 exports[`Controls styled components ListItem should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1jjsim5-ListItem{margin:0 0 0.5vh 0;padding:0px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.css-1jjsim5-ListItem:hover{cursor:pointer;}.css-1jjsim5-ListItem .e1ehg2021{padding-top:0px;padding-bottom:0px;-webkit-box-pack:initial;-webkit-justify-content:initial;-ms-flex-pack:initial;justify-content:initial;}.css-1jjsim5-ListItem .e1ehg2028{margin:0px;padding-top:0px;padding-bottom:0px;}.css-1jjsim5-ListItem .e1ehg20210{margin-left:7vh;}",
       }
     }
@@ -307,10 +307,10 @@ Array [
 `;
 
 exports[`Controls styled components ListPanelWrapper should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1pb1k25-ListPanelWrapper{min-width:400px;max-width:400px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;font-size:smaller;margin-right:1vw;height:75vh;overflow-x:hidden;}.css-1pb1k25-ListPanelWrapper .e1ehg20217{padding-bottom:1vh;}.css-1pb1k25-ListPanelWrapper .e1ehg20218{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;padding-bottom:1vh;}.css-1pb1k25-ListPanelWrapper .e1ehg2021{min-width:none;}",
       }
     }
@@ -323,10 +323,10 @@ Array [
 `;
 
 exports[`Controls styled components MarkerInfoField should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-ntsi7y-MarkerInfoField{font-size:4vh;padding:1vh 1vw;font-size:2vh;padding:0 1vw 1vh;}",
       }
     }
@@ -339,10 +339,10 @@ Array [
 `;
 
 exports[`Controls styled components MarkerInfoHeader should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1g0s5le-MarkerInfoHeader{font-size:4vh;padding:1vh 1vw;font-weight:bold;font-size:2.5vh;}",
       }
     }
@@ -355,10 +355,10 @@ Array [
 `;
 
 exports[`Controls styled components MarkerInfoWrapper should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-su9vlq-MarkerInfoWrapper{min-width:150px;min-height:100px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}",
       }
     }
@@ -371,10 +371,10 @@ Array [
 `;
 
 exports[`Controls styled components PanelWrapper should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1l680q6-PanelWrapper{font-size:4vh;padding:1vh 1vw;min-width:900px;max-width:900px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;overflow:hidden;}.css-1l680q6-PanelWrapper > div > div{width:33vw !important;min-width:500px !important;height:75vh !important;min-height:500px !important;}",
       }
     }
@@ -387,10 +387,10 @@ Array [
 `;
 
 exports[`Controls styled components Row should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1qizpgb-Row:nth-of-type(odd){background-color:#F9E3AE;}.css-1qizpgb-Row:first-of-type{font-size:larger;background-color:#72CAAF;}",
       }
     }
@@ -403,10 +403,10 @@ Array [
 `;
 
 exports[`Controls styled components SelectedIcon should render correctly when not selected 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1227m3b-SelectedIcon{width:4vh;height:4vh;min-width:4vh;min-height:4vh;margin:0 0.5vw;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background-repeat:no-repeat;background-size:contain;}",
       }
     }
@@ -419,10 +419,10 @@ Array [
 `;
 
 exports[`Controls styled components SelectedIcon should render correctly when selected 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-r47jh3-SelectedIcon{width:4vh;height:4vh;min-width:4vh;min-height:4vh;margin:0 0.5vw;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;background-repeat:no-repeat;background-size:contain;background-image:url(data:image/png;base64,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);}",
       }
     }
@@ -436,10 +436,10 @@ Array [
 `;
 
 exports[`Controls styled components Status should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-d51yz3-Status{font-size:4vh;padding:1vh 1vw;font-size:smaller;}",
       }
     }
@@ -452,10 +452,10 @@ Array [
 `;
 
 exports[`Controls styled components SubLabel should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-s673ae-SubLabel{font-size:small;color:#95A5A6;}",
       }
     }
@@ -468,10 +468,10 @@ Array [
 `;
 
 exports[`Controls styled components Table should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-1rkvtt6-Table{font-size:medium;margin:1vh 1vw;border-collapse:collapse;}",
       }
     }
@@ -484,10 +484,10 @@ Array [
 `;
 
 exports[`Controls styled components Wrapper should match latest snapshot 1`] = `
-Array [
+[
   <style
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": ".css-smrfxc-Wrapper{min-width:800px;min-height:600px;font-size:4vh;padding:1vh 1vw;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}",
       }
     }
